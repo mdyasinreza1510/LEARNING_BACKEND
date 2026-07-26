@@ -24,3 +24,7 @@ Status Codes
     500 → Server Error
     
 Headers
+REST API
+JSON
+
+ Phase 2 — Node.js
