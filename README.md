@@ -27,4 +27,26 @@ Headers
 REST API
 JSON
 
- Phase 2 — Node.js
+Phase 2 — Node.js
+
+-> What is Node.js?
+-> Installation
+-> REPL
+  #node -v
+  #npm -v
+  #node (to start REPL AND  write CODE js in terminal)
+  .exit (to exit from the terminal)
+
+-> MODULES
+   A Module is a separate JavaScript file that contains reusable code.
+   fs
+   path
+   os
+   http
+   
+    Core Module      → Built into Node.js
+    Local Module     → Created by you
+    Third-party      → Installed using npm
+
+    require()        → Import
+    module.exports   → Export
