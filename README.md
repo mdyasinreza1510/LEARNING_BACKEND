@@ -14,3 +14,13 @@ POST (create)
 PUT (update existing/ full update data)
 PATCH (partially update)
 DELETE (delete the data)
+Status Codes
+    200 → Success
+    201 → Created
+    400 → Bad Request
+    401 → Unauthorized
+    403 → Forbidden
+    404 → Not Found
+    500 → Server Error
+    
+Headers
