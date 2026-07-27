@@ -1,5 +1,21 @@
 {
-  "dependencies": {
-    "cat-me": "^1.0.3"
-  }
+  "name": "learning_backend",
+  "version": "1.0.0",
+  "description": "LEARNING BACKEND FROM BASIC TO ADVANCE...",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdyasinreza1510/LEARNING_BACKEND.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mdyasinreza1510/LEARNING_BACKEND/issues"
+  },
+  "homepage": "https://github.com/mdyasinreza1510/LEARNING_BACKEND#readme"
 }
