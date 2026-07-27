@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/mdyasinreza1510/LEARNING_BACKEND/issues"
   },
-  "homepage": "https://github.com/mdyasinreza1510/LEARNING_BACKEND#readme"
+  "homepage": "https://github.com/mdyasinreza1510/LEARNING_BACKEND#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
 }
