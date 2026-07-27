@@ -50,3 +50,8 @@ Phase 2 — Node.js
 
     require()        → Import
     module.exports   → Export
+
+
+    PHASE 3 ..........CREATING & STARTING SERVER
+
+    
