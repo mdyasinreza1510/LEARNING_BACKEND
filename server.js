@@ -16,6 +16,6 @@ app.get("/about", (req, res) => {
     res.send("HELLO YASIN YOUR SERVER IS RUNNING YOURE IN ABOUT PAGE");
 })
 
-app.listen(3000) // server ko start kiya 3000 port hai .listen se start kiya server ko.
+app.listen(3000) // server ko start kiya 3000 port no. hai .listen se start kiya server ko.
 
 //ab servers start krne k baad local browser me jake localhost:3000 likhnge result me eror get / aye mtlb serverstart hai 

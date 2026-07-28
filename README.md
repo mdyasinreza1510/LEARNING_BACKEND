@@ -71,9 +71,11 @@ PACKAGES ->
 
 
 
-PHASE 3 ..........CREATING & STARTING SERVER
+PHASE 3 ..........CREATING & STARTING SERVER...................
 
  1. we install express to make a best server.
- 2. to use the package  we write const express = require ('express');
+ 2. npm init -y => nodejs intialization
+ 3. to use the package  we write const express = require ('express');
 
 
+PHASE 4....................REST API.....................
