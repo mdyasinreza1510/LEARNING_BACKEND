@@ -40,10 +40,22 @@ const notes={
 const notes =[]
 app.post('/notes',(req,res)=>{//api ka naam hai /notes aur post metohd ki api hai 
     
+notes.push(req.body);//yaha pr  jo data body se aya hai usko push krdiye notes array me yani frontend se jo request ayi hai, req.from frontend = data
+
+res.status(201).json({
+    messege:"note created sucessfully"
+})//mtlb succes hogya kaam hahahaha aur ek msg send krdiye , aur ye postman ko response bhejega ye msg
+
     console.log(req.body) //req.body me data ayega mtlb body se jo bhi data send hoga wo console me print oga
 
 })
 
+
+
+
+// AB HAM EK API BANAYENGE JISKI MDDD SE USER NE JITNE BHI NOTES BANAYEW HONGE WO UN SBHI KO EK SATH DEKH SKEGA
+
+//yani server se front end me data dikhega 
 
 
 
