@@ -57,10 +57,20 @@ res.status(201).json({
 
 //yani server se front end me data dikhega 
 
+app.get('/notes',(req,res)=>{//data server se fntend pe jarha hai get method k zariya
+
+    res.status(200).json({
+        messege:"all notes feched sucessfully",
+        notes: notes
+    })
+
+})
+
+//ab kya hoga ab h postman pe jayenge aur waha se phle post methoduse krenge data send krenge server pe  fir data server pe ane k baad dobara post man pe jayenghe aur fir get method krke server se data fetch krenge tb ye work krega aur sare notes show honge
 
 
 
-
+ /* */
 
 
 
