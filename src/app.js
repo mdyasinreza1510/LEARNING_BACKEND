@@ -37,14 +37,14 @@ const notes={
 
 // ab useer fnt.end se data send krenge title au description to server pr data snd krne keliye POST KA USE KRTE HAIN
 
-const notes =[]
-app.post('/notes',(req,res)=>{//api ka naam hai /notes aur post metohd ki api hai 
-    
-notes.push(req.body);//yaha pr  jo data body se aya hai usko push krdiye notes array me yani frontend se jo request ayi hai, req.from frontend = data
+const notes = []
+app.post('/notes', (req, res) => {//api ka naam hai /notes aur post metohd ki api hai 
 
-res.status(201).json({
-    messege:"note created sucessfully"
-})//mtlb succes hogya kaam hahahaha aur ek msg send krdiye , aur ye postman ko response bhejega ye msg
+    notes.push(req.body);//yaha pr  jo data body se aya hai usko push krdiye notes array me yani frontend se jo request ayi hai, req.from frontend = data
+
+    res.status(201).json({
+        messege: "note created sucessfully"
+    })//mtlb succes hogya kaam hahahaha aur ek msg send krdiye , aur ye postman ko response bhejega ye msg
 
     console.log(req.body) //req.body me data ayega mtlb body se jo bhi data send hoga wo console me print oga
 
@@ -57,10 +57,10 @@ res.status(201).json({
 
 //yani server se front end me data dikhega 
 
-app.get('/notes',(req,res)=>{//data server se fntend pe jarha hai get method k zariya
+app.get('/notes', (req, res) => {//data server se fntend pe jarha hai get method k zariya
 
     res.status(200).json({
-        messege:"all notes feched sucessfully",
+        messege: "all notes feched sucessfully",
         notes: notes
     })
 
@@ -70,9 +70,20 @@ app.get('/notes',(req,res)=>{//data server se fntend pe jarha hai get method k z
 
 
 
- /* */
+/* ab ham DELETE metohd use krenge kisi bhi node ko delete krne keliye  
+ab hme jis node ko delete krn hai wha hm /notes/index , index ki jo value denge wo note dlt hojayega
+delete(/notes/1,2,3,4,5 etc
+*/
+app.delete('/notes/:index', (req, res) => {
+    const index=req.params.index //is index pr kya value ayi wo hm req.params.index se pta krenge
 
+    delete notes[index]//yaha pe jo notes ka index milega wo delt hojayega
 
+    res.status(200).json({
+        messege:"not deleted sucessfully"
+    })
+
+})
 
 
 
