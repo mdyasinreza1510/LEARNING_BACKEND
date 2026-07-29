@@ -10,6 +10,8 @@ const express = require('express');
 
 const app = express();
 
+app.use(express.json())//ye hmne ek middleware banaya hai jo postman se body me  anae wale data ko read krta hai
+
 
 /* ab practice keliy hm ek notes app banayenge jahan pe ek note obj. banayenge 
 
@@ -38,9 +40,10 @@ const notes={
 const notes =[]
 app.post('/notes',(req,res)=>{//api ka naam hai /notes aur post metohd ki api hai 
     
-    console.log(req.body) //req.body me data ayega
+    console.log(req.body) //req.body me data ayega mtlb body se jo bhi data send hoga wo console me print oga
 
 })
+
 
 
 
