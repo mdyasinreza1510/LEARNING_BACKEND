@@ -75,17 +75,40 @@ ab hme jis node ko delete krn hai wha hm /notes/index , index ki jo value denge 
 delete(/notes/1,2,3,4,5 etc
 */
 app.delete('/notes/:index', (req, res) => {
-    const index=req.params.index //is index pr kya value ayi wo hm req.params.index se pta krenge
+    const index = req.params.index //is index pr kya value ayi wo hm req.params.index se pta krenge
 
     delete notes[index]//yaha pe jo notes ka index milega wo delt hojayega
 
     res.status(200).json({
-        messege:"not deleted sucessfully"
+        messege: "not deleted sucessfully"
     })
 
 })
 
 
+
+
+
+/** ab ham patch method ka use krnge existing data ko update krne keliye  */
+
+app.patch('/notes/:index', (req, res) => {
+
+    const index = req.params.index  //yaha se hmne index ko nikal liya 
+
+    const description = req.body.description // ab jo body me description hai usko mikal k ek variable me assign krdenge
+
+    const title = req.body.title
+    notes[index].title = title
+
+
+    notes[index].description = description
+    //aur us note ka jo bhi description hoga usko hm naye wale se update krdenege
+
+
+    res.status(200).json({
+        messege: "note updated sucessfully"
+    })
+})
 
 
 
