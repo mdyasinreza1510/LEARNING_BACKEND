@@ -77,14 +77,20 @@ JSON
 5. learning postman
     .LEARNED HOW TO USE GET,POST,PATCH AND DELETE METHODS
 
-<h1>PHASE 4  </h1> <h1>MONGO DATABASE.</h1>
-1. MONGO DB (DATABASE)
+<h1>PHASE 4 => MONGO DATABASE.</h1>
+1. MONGO DB (DATABASE) <br>
 2. coonect server to database
+<br>
 3. MAINLY 4 OPERATION IN DATABASE
+<br>
     C => CREATE
+    <br>
     R => READ
+    <br>
     U => UPDATE
+    <br>
     D => DELETE
+    <br>
 4. CREATED A CLUSTER IN MOGO DB AND CONNECTED IT WITH MONGO DB COMPASS
 
 <h2>MONGOOSE </h2>
