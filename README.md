@@ -92,3 +92,13 @@ HTTP METHODS
 
 PHASE 4....................MONGO DATABASE.....................
 1. MONGO DB (DATABASE)
+2. coonect server to database
+3. MAINLY 4 OPERATION IN DATABASE
+    C => CREATE
+    R => READ
+    U => UPDATE
+    D => DELETE
+4. CREATED A CLUSTER IN MOGO DB AND CONNECTED IT WITH MONGO DB COMPASS
+
+    JYNqqzAr48sd6hVT
+    mongodb+srv://aeccse2024mdyasinreza_db_user:JYNqqzAr48sd6hVT@comp-backend.2mmlrs9.mongodb.net/
