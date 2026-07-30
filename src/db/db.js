@@ -5,8 +5,12 @@
 
 const mongoose = require ('mongoose')
 
+
 async function connectdb(){
-await mongoose.connect(process.env.MONGO_URL);// YAHA HMNE PROCESS .EN JO USE KIYA HAI WO ENV ME JO DATA HMNE HIDE KIYA USKE LIE HAI 
+
+
+await mongoose.connect("")
+// YAHA HMNE PROCESS .EN JO USE KIYA HAI WO ENV ME JO DATA HMNE HIDE KIYA USKE LIE HAI 
 
 //awit ka mtlb jb tk mongose server ko connect nhi krdeta hm wait krnge.
 

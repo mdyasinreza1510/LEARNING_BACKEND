@@ -1,3 +1,6 @@
+
+
+
 /* 1... pack ko use krne keliye sbse pehle ek func. banaye  jisme "require("pack name ") likhnge aur console me func likhneg  fir terminal me node filename.js likhenge */
 
 // const express = require('express'); //server created
@@ -37,12 +40,12 @@
 
 
 //ab server ko import krenge
-const { connect } = require("mongoose");
-const app = require("./src/app");
 
+const app = require("./src/app");
 // databse ko import krenge 
-const connectdb=require ("./src/db/db")
-connectdb(); //aur yaha se connect krenge
+
+const connectdb= require("./src/db/db")
+connectdb() //aur yaha se connect krenge
 
 app.listen(3000,()=>{
     console.log ("server is running on port no 3000")
