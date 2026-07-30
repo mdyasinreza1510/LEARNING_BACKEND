@@ -100,9 +100,6 @@ PHASE 4....................MONGO DATABASE.....................
     D => DELETE
 4. CREATED A CLUSTER IN MOGO DB AND CONNECTED IT WITH MONGO DB COMPASS
 
-    JYNqqzAr48sd6hVT
-    mongodb+srv://aeccse2024mdyasinreza_db_user:JYNqqzAr48sd6hVT@comp-backend.2mmlrs9.mongodb.net/
-
 <h2>MONGOOSE </h2>
  => SERVER KO DAATABSE SE CONNSCT KRNE KELIYE EK PCKG INSTALL KRENGE JISKA NAAM HAI MONGOOSE HAI 
 
