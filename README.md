@@ -102,3 +102,8 @@ PHASE 4....................MONGO DATABASE.....................
 
     JYNqqzAr48sd6hVT
     mongodb+srv://aeccse2024mdyasinreza_db_user:JYNqqzAr48sd6hVT@comp-backend.2mmlrs9.mongodb.net/
+
+<h4>MONGOOSE </h4>
+ => SERVER KO DAATABSE SE CONNSCT KRNE KELIYE EK PCKG INSTALL KRENGE JISKA NAAM HAI MONGOOSE HAI 
+
+ IT CONNECTS THE SERVER TO BACKEND
