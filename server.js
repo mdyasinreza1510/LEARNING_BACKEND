@@ -37,7 +37,12 @@
 
 
 //ab server ko import krenge
+const { connect } = require("mongoose");
 const app = require("./src/app");
+
+// databse ko import krenge 
+const connectdb=require ("./src/db/db")
+connectdb(); //aur yaha se connect krenge
 
 app.listen(3000,()=>{
     console.log ("server is running on port no 3000")
