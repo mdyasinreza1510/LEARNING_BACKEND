@@ -1,6 +1,6 @@
-LEARNING BACKEND FROM BASIC TO ADVANCE...
+<h1>LEARNING BACKEND FROM BASIC TO ADVANCE... </h1>
 
-Phase 1 — Backend Fundamentals (26/7/26)
+<h1>Phase 1 — Backend Fundamentals (26/7/26)</h1>
 
 What is Backend?
 Frontend vs Backend
@@ -27,7 +27,7 @@ Headers
 REST API
 JSON
 
-Phase 2 — Node.js
+<h1>Phase 2 — Node.js</h1>
 
 -> What is Node.js?
 -> Installation
@@ -37,7 +37,7 @@ Phase 2 — Node.js
   #node (to start REPL AND  write CODE js in terminal)
   .exit (to exit from the terminal)
 
--> MODULES
+<h1>MODULES</h1>
    A Module is a separate JavaScript file that contains reusable code.
    fs
    path
@@ -52,7 +52,7 @@ Phase 2 — Node.js
     module.exports   → Export
 
 
-PACKAGES ->
+<h1>PACKAGES -></h1>
 
  /* 1... pack ko use krne keliye sbse pehle ek func. banaye  jisme "require("pack name ") likhnge aur console me func likhneg  fir terminal me node filename.js likhenge */
 
@@ -61,25 +61,15 @@ PACKAGES ->
 
 
 
-
-
-
-
-
-
-
-
-
-
-PHASE 3 ..........CREATING & STARTING SERVER...................
+<h1>PHASE 3 => CREATING & STARTING SERVER</h1>
 
  1. we install express to make a best server.
  2. npm init -y => nodejs intialization
  3. to use the package  we write const express = require ('express');
 
 
-PHASE 4....................REST API.....................
-HTTP METHODS
+<h1>PHASE 4 => REST API</h1>
+<h3>HTTP METHODS</h3>
 1. GET    => (JAB DATA SERVER SE FETCH KRNA HO)
 2. POST   => (JAB SERVER PE DATA SEND KRNA HO )
 3. PATCH  => (JAB SERVER PR ALREADY EXIST DATA KO UPDATE KRNA HO)
@@ -87,10 +77,7 @@ HTTP METHODS
 5. learning postman
     .LEARNED HOW TO USE GET,POST,PATCH AND DELETE METHODS
 
-
-
-
-PHASE 4....................MONGO DATABASE.....................
+<h1>PHASE 4  </h1> <h1>MONGO DATABASE.</h1>
 1. MONGO DB (DATABASE)
 2. coonect server to database
 3. MAINLY 4 OPERATION IN DATABASE
@@ -102,7 +89,6 @@ PHASE 4....................MONGO DATABASE.....................
 
 <h2>MONGOOSE </h2>
  => SERVER KO DAATABSE SE CONNSCT KRNE KELIYE EK PCKG INSTALL KRENGE JISKA NAAM HAI MONGOOSE HAI 
-
  IT CONNECTS THE SERVER TO BACKEND
 
 <h2>toconnect the db</h2>
