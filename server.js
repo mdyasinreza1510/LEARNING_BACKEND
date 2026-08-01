@@ -29,7 +29,8 @@
 
 
 
-
+const dns=require("dns")
+dns.setServers(["1.1.1.1", "8.8.8.8"]);
 
 
 
@@ -40,12 +41,12 @@
 
 
 //ab server ko import krenge
-
 const app = require("./src/app");
-// databse ko import krenge 
 
+// databse ko import krenge 
 const connectdb= require("./src/db/db")
-connectdb() //aur yaha se connect krenge
+
+connectdb(); //aur yaha se connect krenge
 
 app.listen(3000,()=>{
     console.log ("server is running on port no 3000")
