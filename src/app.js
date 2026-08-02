@@ -163,7 +163,7 @@ app.post("/notes",async (req,res)=>{
 
     app.get('/notes',async(req,res)=>{//DATA KO GET KRNE KELIYE GET METHOD HM FIND() KA USE KRENGE aur "FIND()" ka kaam ye hai ki jitne bhi note ya daa create hue hain DB me unhe yaha pe lake rkhhdoooo
             
-        const notes= await notemodel.find() //find hamesha ek aray return krega isiliye isko note me daal diye
+        const notes= await notemodel.find() //find() hamesha ek aray return krega isiliye isko note me daal diye
 
         res.status(200).json({
             messege:"notes fetched sucessfully",
