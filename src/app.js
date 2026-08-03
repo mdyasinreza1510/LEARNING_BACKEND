@@ -171,6 +171,22 @@ app.post("/notes",async (req,res)=>{
         })
 
     })
+
+
+
+
+
+    //ab hm ek note ko delete krnge aur delete krne keliuye ham id ka use krenge kyuki index isme nahi hota 
+    app.delete("/notes/:id",async (req,res)=>{
+
+        //ab kisi ko not ko dlt krnekeliye jm db se ek id copy krlenge aur postm,an k dekete api me jake notes/id me likhdnege
+        const id=req.params.id
+        await notemodel.findOneAndDelete({
+            _id:id
+            //yaha pe db me isd _id se save rhti hai isliye yaha aise likhte hain
+
+        })//ek particulr cheez ko find krega aur delete krega
+    })
 })
 
 
