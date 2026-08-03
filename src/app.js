@@ -186,6 +186,10 @@ app.post("/notes",async (req,res)=>{
             //yaha pe db me isd _id se save rhti hai isliye yaha aise likhte hain
 
         })//ek particulr cheez ko find krega aur delete krega
+    
+    res.status(200).json({
+        messege:"note delted sucessfully"
+    })
     })
 })
 
