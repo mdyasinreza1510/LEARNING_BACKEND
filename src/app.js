@@ -200,11 +200,12 @@ app.patch('/notes/:id',async(req,res)=>{
 
     const id=req.params.id;
     const description=req.body.description//frontend ka description
-    await notemodel.findOneAndUpdate(
 
-    {_id:id}, {description:description}
 
-    )
+    //findone&update hmse 2 obj {jis basis pe find krnahai eg:- id} {kya update krna hai eg:- description} mangti hai
+    await notemodel.findOneAndUpdate({
+        _id:id},{description:description})
+        
     res.status(200).json({
         messege:"note updated sucessfully"
     })
