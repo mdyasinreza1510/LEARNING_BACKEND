@@ -96,7 +96,7 @@ const notes={
 
 // app.patch('/notes/:index', (req, res) => {
 
-//     const index = req.params.index  //yaha se hmne index ko nikal liya 
+// const index = req.params.index  //yaha se hmne index ko nikal liya 
 
 //     const description = req.body.description // ab jo body me description hai usko mikal k ek variable me assign krdenge
 
@@ -190,6 +190,23 @@ app.post("/notes",async (req,res)=>{
     res.status(200).json({
         messege:"note delted sucessfully"
     })
+    })
+})
+
+
+
+
+app.patch('/notes/:id',async(req,res)=>{
+
+    const id=req.params.id;
+    const description=req.body.description//frontend ka description
+    await notemodel.findOneAndUpdate(
+
+    {_id:id}, {description:description}
+
+    )
+    res.status(200).json({
+        messege:"note updated sucessfully"
     })
 })
 
