@@ -110,16 +110,17 @@ JSON
  <h1>POST AND FEED (MINI-PROJECT)</h1>
  <br>
 
- >  created a frontend using ract where i created two component one for   creating a feed and other for geting all the created post using CRUD 
+ 1) created a frontend using ract where i created two component one for   creating a feed and other for geting all the created post using CRUD 
 
- > created the backend firstly used the mutler,imagekit,mongodb,express
+2) created the backend firstly used the mutler,imagekit,mongodb,express
+
  <br>
 
  <h1>AUTHENTICATION</h1>
- 
+
   THERE ARE FOR TYPES IN AUTHENTICATION
 
- > VALIDATION
- > VERIFICATION
- > AUTHENTICATION
- > AUTHORIZATION
+ 1) VALIDATION
+ 2) VERIFICATION
+ 3) AUTHENTICATION
+ 4) AUTHORIZATION
