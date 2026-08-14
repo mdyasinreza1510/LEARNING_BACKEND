@@ -9,28 +9,49 @@
  ab mongo db me jo bhi data create hoga uski ek apni id hogi 10000 user = 10000 ids  aur sb different hogi 
 
     - AB JAB SERVER USER KO DB ME REGISTER KREGA TO SERVER EK TOKEN GENERATE KREGA AUR TOKEN GENERATE HOGA JSONWEBTPKEN SE (JWT)
-    -
+
+    - AB TOKEN CREATE KRNGE TOKEN = jwt.sign()
+    aur sign 2 cheze mangt6a hai user ka data aur dusra hota hai jwt_secret
 */
 
-
+//5:20:21
 const usermodel = require('../models/user.model');
-const jwt = require ('jsonwebtoken');
-
-
-
+const jwt = require('jsonwebtoken');
 
 
 //yaha ham logic likhenge api ka 
-async function registeruser(req,res){
+async function registeruser(req, res) {
 
-    const {username, email, password } = req.body;
+    //yaha jo hmne {username , email, password} me likhahai hmne directly req.body se jo username,email , pass aya hai usko acces krre hain eg:- data=req.body => data.username /email/pass
+    
+    const {username , email, password}= req.body;
 
 
 
     // yaha ham abhi ek user create krenge " u1 "
-    const user= usermodel.create({
-        username,email,password
+    const user = await  usermodel.create({
+        /* ab ham yaha data.username ki jgha seedha username ,email,pass likhdenge */
+        username,
+        email,
+        password
+       
     })
+
+    const token = jwt.sign({
+        id: user._id
+    },
+        process.env.JWT_SECRET)
+
+    res.status(201).json({
+        messege: "user registered sucessfully",
+        user,
+        token
+        
+    })
+
+    console.log(req.body)
+
+
 }
 
 
@@ -38,4 +59,4 @@ async function registeruser(req,res){
 
 
 
-module.exports = {registeruser}
+module.exports = { registeruser }

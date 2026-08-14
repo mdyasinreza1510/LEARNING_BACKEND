@@ -11,4 +11,4 @@
 
  const usermodel = mongoose.model("user",userschema)
 
- module.exports = userschema
+ module.exports = usermodel

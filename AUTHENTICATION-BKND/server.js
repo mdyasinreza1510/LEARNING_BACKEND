@@ -5,7 +5,6 @@ dns.setServers(["1.1.1.1", "8.8.8.8"]);
 
 connectdb();
 
-
 app.listen(3000,() =>{
     console.log("SERVER IS RUNNING")
 })
