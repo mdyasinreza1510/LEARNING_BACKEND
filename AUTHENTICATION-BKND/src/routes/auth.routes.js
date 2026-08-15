@@ -19,8 +19,11 @@ const authController = require('../controllers/auth.controller')
 const router = express.Router()
 
 
-/*           /api        / auth  /register (name of api) */
+/*           /api        / auth  /the logic function */
 router.post('/register', authController.registeruser)
+
+
+router.get('/account',authController.getcookie)
 
 
 module.exports = router

@@ -12,6 +12,8 @@
 
     - AB TOKEN CREATE KRNGE TOKEN = jwt.sign()
     aur sign 2 cheze mangt6a hai user ka data aur dusra hota hai jwt_secret
+
+5) AB HAM COKIE KA USE KRENGE TOKEN KO SAVE KRNE KELIYE 
 */
 
 //5:20:21
@@ -23,18 +25,18 @@ const jwt = require('jsonwebtoken');
 async function registeruser(req, res) {
 
     //yaha jo hmne {username , email, password} me likhahai hmne directly req.body se jo username,email , pass aya hai usko acces krre hain eg:- data=req.body => data.username /email/pass
-    
-    const {username , email, password}= req.body;
+
+    const { username, email, password } = req.body;
 
 
 
     // yaha ham abhi ek user create krenge " u1 "
-    const user = await  usermodel.create({
+    const user = await usermodel.create({
         /* ab ham yaha data.username ki jgha seedha username ,email,pass likhdenge */
         username,
         email,
         password
-       
+
     })
 
     const token = jwt.sign({
@@ -42,15 +44,29 @@ async function registeruser(req, res) {
     },
         process.env.JWT_SECRET)
 
+    res.cookie("token", token)//yaha pe ham token ko cookie me save krenege
+
+
+
     res.status(201).json({
         messege: "user registered sucessfully",
         user,
-        token
-        
+
+
     })
 
     console.log(req.body)
 
+
+}
+
+ function getcookie(req,res){
+    console.log("cookies:",req.cookies);
+
+    res.json({
+        msg:" cookies fetched sucessfully",
+        cookies: req.cookies
+    })
 
 }
 
@@ -59,4 +75,7 @@ async function registeruser(req, res) {
 
 
 
-module.exports = { registeruser }
+
+
+
+module.exports = { registeruser, getcookie}
