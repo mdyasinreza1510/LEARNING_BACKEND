@@ -74,7 +74,7 @@ async function registeruser(req, res) {
 async function getUsers (req,res){
 
     const alluser= await usermodel.find();
-    const id=req.params.id;
+ 
     res.status(200).json({
         messege:"ALL USER DETAILS FETCHED SUCESSFULLY",
         
