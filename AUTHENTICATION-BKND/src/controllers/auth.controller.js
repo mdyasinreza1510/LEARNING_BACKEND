@@ -38,7 +38,7 @@ async function registeruser(req, res) {
         password
 
     })
-
+    //ab ek token banayenge aur wo token hr user ki apni id hogi
     const token = jwt.sign({
         id: user._id
     },
