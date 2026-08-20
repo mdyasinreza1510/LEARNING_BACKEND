@@ -32,12 +32,14 @@ async function registeruser(req, res) {
 
     // yaha ham abhi ek user create krenge " u1 "
     const user = await usermodel.create({
-        /* ab ham yaha data.username ki jgha seedha username ,email,pass likhdenge */
+        /* ab ham yaha data.username ki jgha seedha username ,email,pass likhdenge
+        jo ki hamare data ko DB me save krdege */
         username,
         email,
         password
 
     })
+
     //ab ek token banayenge aur wo token hr user ki apni id hogi
     const token = jwt.sign({
         id: user._id
@@ -61,13 +63,23 @@ async function registeruser(req, res) {
 }
 
  function getcookie(req,res){
-    console.log("cookies:",req.cookies);
-
     res.json({
         msg:" cookies fetched sucessfully",
-        cookies: req.cookies
+        cookies: req.cookies,
+       
     })
 
+}
+
+async function getUsers (req,res){
+
+    const alluser= await usermodel.find();
+    const id=req.params.id;
+    res.status(200).json({
+        messege:"ALL USER DETAILS FETCHED SUCESSFULLY",
+        
+        alluser:alluser
+    })
 }
 
 
@@ -78,4 +90,4 @@ async function registeruser(req, res) {
 
 
 
-module.exports = { registeruser, getcookie}
+module.exports = { registeruser, getcookie, getUsers}
