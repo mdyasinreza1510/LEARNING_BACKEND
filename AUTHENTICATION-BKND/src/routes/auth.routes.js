@@ -27,4 +27,6 @@ router.get('/account',authController.getcookie)
 
 router.get('/alluser',authController.getUsers);
 
+
+
 module.exports = router
