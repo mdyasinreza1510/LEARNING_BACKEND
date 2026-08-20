@@ -25,8 +25,26 @@ const jwt = require('jsonwebtoken');
 async function registeruser(req, res) {
 
     //yaha jo hmne {username , email, password} me likhahai hmne directly req.body se jo username,email , pass aya hai usko acces krre hain eg:- data=req.body => data.username /email/pass
-
     const { username, email, password } = req.body;
+
+
+
+    /* findOne() Ye MongoDB me ek document dhoondhta hai jo tumhari condition ko match karta ho.
+    
+    findOne() MongoDB collection me di gayi condition ke hisaab se pehla matching document dhoondhta hai.
+    
+    Agar document mil jaye to object return karta hai, aur agar na mile to null return karta hai.*/
+    const useralreadyexist = await usermodel.findOne({
+        email
+    })
+    //aur isko hm user create krne se phle likhnge
+    if (useralreadyexist) {
+        //return is very important
+        return res.status(409).json({
+            messege: "USER ALREADY EXIST"
+        })
+    }
+
 
 
 
@@ -39,6 +57,8 @@ async function registeruser(req, res) {
         password
 
     })
+
+
 
     //ab ek token banayenge aur wo token hr user ki apni id hogi
     const token = jwt.sign({
@@ -62,23 +82,23 @@ async function registeruser(req, res) {
 
 }
 
- function getcookie(req,res){
+function getcookie(req, res) {
     res.json({
-        msg:" cookies fetched sucessfully",
+        msg: " cookies fetched sucessfully",
         cookies: req.cookies,
-       
+
     })
 
 }
 
-async function getUsers (req,res){
+async function getUsers(req, res) {
 
-    const alluser= await usermodel.find();
- 
+    const alluser = await usermodel.find();
+
     res.status(200).json({
-        messege:"ALL USER DETAILS FETCHED SUCESSFULLY",
-        
-        alluser:alluser
+        messege: "ALL USER DETAILS FETCHED SUCESSFULLY",
+
+        alluser: alluser
     })
 }
 
@@ -90,4 +110,4 @@ async function getUsers (req,res){
 
 
 
-module.exports = { registeruser, getcookie, getUsers}
+module.exports = { registeruser, getcookie, getUsers }
