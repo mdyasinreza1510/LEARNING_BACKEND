@@ -1,5 +1,6 @@
 const express = require ('express')
 const authRoutes= require('./routes/auth.routes') //ip1
+const postRoutes= require('./routes/post.routes');
 const cookieParser = require ('cookie-parser')
 
 
@@ -24,7 +25,8 @@ eg:- /api/auth/ actual api name (eg:- /register)
 
 */
 
-app.use("/api/auth/",authRoutes)
+app.use("/api/auth/",authRoutes);
+app.use ('/api/post/',postRoutes)
 
 
 
