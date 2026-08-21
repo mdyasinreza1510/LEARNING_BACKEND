@@ -61,10 +61,7 @@ async function registeruser(req, res) {
 
 
     //ab ek token banayenge aur wo token hr user ki apni id hogi
-    const token = jwt.sign({
-        id: user._id
-    },
-        process.env.JWT_SECRET)
+    const token = jwt.sign({id: user._id},process.env.JWT_SECRET);
 
     res.cookie("token", token)//yaha pe ham token ko cookie me save krenege
 

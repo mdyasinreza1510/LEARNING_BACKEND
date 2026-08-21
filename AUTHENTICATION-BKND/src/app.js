@@ -1,4 +1,5 @@
 const express = require ('express')
+
 const authRoutes= require('./routes/auth.routes') //ip1
 const postRoutes= require('./routes/post.routes');
 const cookieParser = require ('cookie-parser')
